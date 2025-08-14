@@ -17,11 +17,12 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "Olá, não há nessa terra o que eu não possa fazer!");
+        // JOptionPane.showMessageDialog(null, "Olá, não há nessa terra o que eu não possa fazer!");
 
 
-        Conta conta = new Conta();
+        Conta conta = new Conta(); // nao usar o JOptionPane
         
+
     }
 }
 
