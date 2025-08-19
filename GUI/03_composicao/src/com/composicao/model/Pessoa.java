@@ -4,7 +4,7 @@ public class Pessoa {
     private String nome;
     private String cpf;
     private String email;
-    private String telfone;
+    private String telefone;
     private String endereco;
 
 
@@ -12,7 +12,7 @@ public class Pessoa {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
-        this.telfone = telfone;
+        this.telefone = telfone;
         this.endereco = endereco;
     }
 
@@ -43,11 +43,11 @@ public class Pessoa {
     }
 
     public String getTelfone() {
-        return this.telfone;
+        return this.telefone;
     }
 
-    public void setTelfone(String telfone) {
-        this.telfone = telfone;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getEndereco() {

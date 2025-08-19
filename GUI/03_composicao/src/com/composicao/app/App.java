@@ -12,7 +12,8 @@ public class App {
 
 
         String[] opcoes = {"Exibir dados da conta", "Fazer deposito ", " fazer Sacar", "Sair"};    
-        Object opcao;  
+        Object opcao; 
+        double valor;  
 
 
 
@@ -31,16 +32,19 @@ usuario.setEndereco(JOptionPane.showInputDialog("Endereco do titular da conta"))
                 );
                 break;
                 case "Fazer deposito":
-                    double valorDeposito = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do deposito"));
-                    cc.fazerDeposito(valorDeposito);
-                    JOptionPane.showMessageDialog(null, "Deposito realizado com sucesso! Saldo atual: " + cc.getSaldo());
+                valor =  Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do deposito"));
+                JOptionPane.showMessageDialog(null, "Deposito realizado com sucesso! \nSaldo atual: " + cc.fazerDeposito(valor),"Deposito",JOptionPane.INFORMATION_MESSAGE);
+
+
+                    
+
                     break;
                 case "fazer Sacar":
                     double valorSaque = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do saque"));
                     cc.fazerSaque(valorSaque);
                     JOptionPane.showMessageDialog(null, "Saque realizado com sucesso! Saldo atual: " + cc.getSaldo());
 
-                    
+
             //         break;
             //     case "Fazer deposito":
             //         double valorDeposito = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do deposito"));
@@ -60,21 +64,16 @@ usuario.setEndereco(JOptionPane.showInputDialog("Endereco do titular da conta"))
             // }
 
 
-
+            }
 
 
         }while (opcao != "Sair");
 
-
-
     }
+
 }
 
 
-
-
-
-
-//  olha aqui da dev pelo nobiot escolhi a pasta gui e fiz o pack 
-//  depois em src novo pack mapara o model  ele no final tem model ao inves de app
-//  depois de ter criado cada m temos 3 packts e app interfaces e model 
+// olha aqui da dev pelo nobiot escolhi a pasta gui e fiz o pack
+// depois em src novo pack mapara o model ele no final tem model ao inves de app
+// depois de ter criado cada m temos 3 packts e app interfaces e model
