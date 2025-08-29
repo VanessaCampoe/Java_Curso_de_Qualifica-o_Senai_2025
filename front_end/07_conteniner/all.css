@@ -1,0 +1,6 @@
+#botaodavanessa input {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: brown;
+
+}
