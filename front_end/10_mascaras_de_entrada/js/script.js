@@ -66,3 +66,4 @@ form.addEventListener('submit', function(event) {
 });
 
 
+// 👉 Isso é input masking: usar replace() com expressões regulares para formatar um valor em tempo real.
