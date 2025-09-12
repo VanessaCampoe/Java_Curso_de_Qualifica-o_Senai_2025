@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS db_java;
+USE db_java
+SELECT * FROM pessoa;
