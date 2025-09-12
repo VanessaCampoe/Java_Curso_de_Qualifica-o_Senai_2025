@@ -11,3 +11,5 @@ public class CrudSystemApplication {
 	}
 
 }
+
+//  para executar devo colocar localhost:8080

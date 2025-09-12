@@ -20,7 +20,7 @@ public class DataConfig {
         dataSource.setUrl("jdbc:mysql://localhost:3306/db_java");
         dataSource.setUsername("root");
         dataSource.setPassword("");
-        return dataSource();
+        return dataSource;
     }
     // conexao com o banco 
 
@@ -31,7 +31,7 @@ public class DataConfig {
         adapter.setDatabase(Database.MYSQL);
         adapter.setShowSql(true);
         adapter.setGenerateDdl(true); // para fazer o creat table 
-        adapter.setDatabasePlatform("org.hibertnate.dialect.MySQL5Dialect");
+        adapter.setDatabasePlatform("org.hibertnate.dialect.MySQL8Dialect");
         adapter.setPrepareConnection(true);
 
 
