@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import com.crud.app.repositpry.AppRepository;
 import com.crud.app.models.Pessoa;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import org.springframework.web.servlet.ModelAndView;
+
 
 
 @Controller
@@ -29,6 +31,17 @@ public class CrudController {
         return "redirect:/";
 
     }
+    // lista todos os
+    @RequestMapping(value="/listarUsuario", method=RequestMethod.GET)
+    public ModelAndView listarUsuario(){
+        ModelAndView  mv = new ModelAndView("lista");
+        Iterable<Pessoa> usuario = csr.findAll();
+        mv.addObject("usuario", usuario );
+        return mv;
+
+    
+    
     }
+}
     
 
