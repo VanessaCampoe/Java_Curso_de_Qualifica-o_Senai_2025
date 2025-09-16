@@ -32,11 +32,11 @@ public class CrudController {
 
     }
     // lista todos os
-    @RequestMapping(value="/listarUsuario", method=RequestMethod.GET)
-    public ModelAndView listarUsuario(){
-        ModelAndView  mv = new ModelAndView("lista");
-        Iterable<Pessoa> usuario = csr.findAll();
-        mv.addObject("usuario", usuario );
+    @RequestMapping(value="/listarUsuarios", method=RequestMethod.GET)
+    public ModelAndView listarUsuarios(){
+        ModelAndView  mv = new ModelAndView("listar");
+        Iterable<Pessoa> usuarios = csr.findAll();
+        mv.addObject("usuarios", usuarios );
         return mv;
 
     

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="https://thymeleaf.org" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring e Bootstrap</title>
+    <!-- https://www.thymeleaf.org/ -->
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- favicon -->
+    <link href="img/icone.png" rel="shortcut icon" type="image/png">
+
+    <!-- css externo -->
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body class="bg-dark" data-bs-theme="dark">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg mb-5" data-bs-theme="dark" style="background-color: #16161d;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/icone.png" alt="Ícone">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastrar">Cadastrar usuário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Listar usuário</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fim do navbar -->
+    <div class="container">
+        <h1>Lista de usuário</h1>
+        <hr class="mb-5">
+    </div>
+    <!-- tabela -->
+
+    <div class="mx-auto w-75">
+        <!-- Cabeçalho da tabela -->
+        <div th:each="" usuario : ${usuario}>
+            <div class="row fw-bold border border-primary bg-primary bg-opacity-25 py-2">
+
+                <div class="col-1">#</div>
+                <div class="col-3">Nome:</div>
+                <div class="col-3">CPF:</div>
+                <div class="col-3">E-mail:</div>
+            </div>
+            <!-- Linha 1 -->
+            <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">1</div>
+                <div class="col-3">Mark</div>
+                <div class="col-3">Otto</div>
+                <div class="col-3">@mdo</div>
+                <div class="col-2">
+                    <a href="/alterar/1" class="btn btn-warning btn-sm me-1">Alterar</a>
+                    <a href="/excluir/1" class="btn btn-danger btn-sm">Excluir</a>
+                </div>
+            </div>
+            <!-- Linha 2 -->
+            <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">2</div>
+                <div class="col-3">Jacob</div>
+                <div class="col-3">Thornton</div>
+                <div class="col-3">@fat</div>
+                <div class="col-2">
+                    <a href="/alterar/2" class="btn btn-warning btn-sm me-1">Alterar</a>
+                    <a href="/excluir/2" class="btn btn-danger btn-sm">Excluir</a>
+                </div>
+            </div>
+            <!-- Linha 3 -->
+            <div class="row align-items-center py-2">
+                <div class="col-1">3</div>
+                <div class="col-3">John</div>
+                <div class="col-3">Doe</div>
+                <div class="col-3">@social</div>
+                <div class="col-2">
+                    <a href="/alterar/3" class="btn btn-warning btn-sm me-1">Alterar</a>
+                    <a href="/excluir/3" class="btn btn-danger btn-sm">Excluir</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
