@@ -1,0 +1,3 @@
+primeiro vimos os database depois o config 
+lembrar de fazer o app 
+3 data cpnfig dentro do crud 
