@@ -1,7 +1,5 @@
 package com.crud.app;
 
-
-
 import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +23,7 @@ public class DataConfig {
     // conexao com o banco 
 
     @Bean 
-    public JpaVendorAdapter JpaVendorAdapter () {
+    public JpaVendorAdapter JpaVendorAdapter() {
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 
         adapter.setDatabase(Database.MYSQL);
