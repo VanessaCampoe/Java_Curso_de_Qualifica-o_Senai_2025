@@ -19,16 +19,28 @@ public class PessoaController {
     }
 
     @GetMapping("/cadastrar")
-    public String exibirFormulario(Model model) {
-        model.addAttribute("pessoa", new PessoaDesaparecida());
+    public String cadastrar() {
         return "cadastrar";
     }
 
     @PostMapping("/cadastrar")
-    public String salvar(@ModelAttribute PessoaDesaparecida pessoa) {
+    public String cadastrar(PessoaDesaparecida pessoa) {
         pessoaRepository.save(pessoa);
         return "redirect:/listar";
     }
+
+//     @GetMapping("/cadastrar")
+//     public String exibirFormulario(Model model) {
+//         model.addAttribute("pessoa", new PessoaDesaparecida());
+//         return "cadastrar";
+//     }
+
+//    @PostMapping("/cadastrar")
+//     public String salvar(@ModelAttribute PessoaDesaparecida pessoa) {
+//     pessoaRepository.save(pessoa);
+//     return "redirect:/listar";
+// }
+
 
     @GetMapping("/listar")
     public String listar(Model model) {

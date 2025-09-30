@@ -1,4 +1,3 @@
-
 // 1 Definir o package da classe
 // 1.1 Pular umas linhas do import
 // 2 Declarar os ATRIBUTOS da classe (lembra maluca nao é uma pessoa caralho)
@@ -14,13 +13,18 @@
 
 package com.example.desaparecidos.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class PessoaDesaparecida {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String nome;
